@@ -29,60 +29,76 @@ Below is the general structure of an HTML document. To generalize and give you a
 
 The `head` tag surrounds other tags that are used to manipulate or enhance the website and what we see in the body. In the `head`, we can include things like `<script>` tags for JavaScript. As we see below, we import our CSS styling via a `link` tag.
 
-The `body` tag surrounds everything in public view on a website. Any text, videos, pictures, lists, sections, colors, etc. 
+The `body` tag surrounds everything in public view on a website. Any text, videos, pictures, lists, sections, colors, etc.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Meta tags can do a lot more than just help with SEO -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta tags can do a lot more than just help with SEO -->
     <title>First WebPage</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>This is the biggest heading tag used for name of the comapany</h1>
+      <h1>This is the biggest heading tag used for name of the comapany</h1>
     </header>
     <nav>
-        <ul>
-            <li>This is a list.</li>
-            <li>Home</li>
-            <li>Services</li>
-            <li>About Us</li>
-            <li>Contact</li>
-        </ul>
+      <ul>
+        <li>This is a list.</li>
+        <li>Home</li>
+        <li>Services</li>
+        <li>About Us</li>
+        <li>Contact</li>
+      </ul>
     </nav>
     <section>
-        Havn't you liked this answer yet!
+      Havn't you liked this answer yet!
     </section>
     <footer>
-        Copyright &copy; 2019-2020
+      Copyright &copy; 2019-2020
     </footer>
-  <img src='https://imagesource.com/image.jpg' alt="image"/>
-  <h2>The structure of HTML Doc</h2>
-</body>
-
+    <img src="https://imagesource.com/image.jpg" alt="image" />
+    <h2>The structure of HTML Doc</h2>
+  </body>
 </html>
 ```
 
 Here's what you can expect to find for different `meta` tag properties and enhance our SEO performance:
 
 ```html
-		<meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Grow your Business Digitally | In Hyderabad" />
-    <meta property="og:description" content="Neoistone is a reliable, fast and robust platform for all the needs of Hosting and Domain name development tools is so easy to use that litespeed it makes fast site" />
-    <meta property="og:url" content="http://localhost/" />
-    <meta property="og:site_name" content="Neoistone: Best Web Development and Hosting services" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Grow your Business Digitally | In Hyderabad" />
-    <meta name="twitter:description" content="Neoistone is a reliable, fast and robust platform for all the needs of Hosting and Domain name development tools is so easy to use that litespeed it makes fast site" />
-    <meta name="twitter:image" content="http://localhost/static/brand/banner_logo.png" />
-    <meta name="theme-color" content="#ee5b3e" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="Grow your Business Digitally | In Hyderabad"
+/>
+<meta
+  property="og:description"
+  content="Neoistone is a reliable, fast and robust platform for all the needs of Hosting and Domain name development tools is so easy to use that litespeed it makes fast site"
+/>
+<meta property="og:url" content="http://localhost/" />
+<meta
+  property="og:site_name"
+  content="Neoistone: Best Web Development and Hosting services"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+  name="twitter:title"
+  content="Grow your Business Digitally | In Hyderabad"
+/>
+<meta
+  name="twitter:description"
+  content="Neoistone is a reliable, fast and robust platform for all the needs of Hosting and Domain name development tools is so easy to use that litespeed it makes fast site"
+/>
+<meta
+  name="twitter:image"
+  content="http://localhost/static/brand/banner_logo.png"
+/>
+<meta name="theme-color" content="#ee5b3e" />
 ```
 
 # Media Optimization for Speed
@@ -92,11 +108,15 @@ Regardless of your technical background, we all know that speed is king and havi
 Yes, it's true images, videos, and graphics can be improve engagement. However, there is a negative side. If the media files are too large, they can cause your website load times to slow down. The best way to reduce image size is through compression (there's a lot of tools to help). Other ways include using the `srcset` and `size` attributes.
 
 ```html
-<img srcset="/img/blog/responsive-images-lg.png 730w,
-             /img/blog/responsive-images-md.png 610w,
-             /img/blog/responsive-images-sm.png 350w"
-     src="/img/blog/reponsive-images.png"
-     alt="responsive images">
+<img
+  srcset="
+    /img/blog/responsive-images-lg.png 730w,
+    /img/blog/responsive-images-md.png 610w,
+    /img/blog/responsive-images-sm.png 350w
+  "
+  src="/img/blog/reponsive-images.png"
+  alt="responsive images"
+/>
 ```
 
 The `srcset` attribute allows you to have multiple images sources that will render the image depending on the size of the viewport.
