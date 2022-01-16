@@ -10,15 +10,14 @@ class Tags extends Component {
         {tags &&
           tags.map(tag => (
             <span key={tag}>
-              <Link
-                className="post-card-tag-link"
-                key={tag}
-                // style={{ textDecoration: "none" }}
-                to={`/tags/${_.kebabCase(tag)}`}
-              >
-                #{tag}
-              </Link>{" "}
-            </span>
+            <Link className="post-card-tag-link"
+            key={tag}
+            // style={{ textDecoration: "none" }}
+            to={`/tags/${_.kebabCase(tag)}`}
+            >
+            #{tag}
+            </Link>
+            {" "}</span>
           ))}
       </div>
     );

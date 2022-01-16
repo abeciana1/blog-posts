@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-
+import ProfilePic from "../../content/assets/profile-pic.png";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 // import Bio from "../components/bio"
@@ -22,10 +22,22 @@ const BlogIndex = ({ data }, location) => {
       />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
-        <header className="page-head">
-          <h2 className="page-head-title">
-            {data.site.siteMetadata.description}
-          </h2>
+        <header style={{ textAlign: "center", paddingBottom: "50px" }}>
+          <h5 className="page-head-title">
+            <div style={{ textAlign: "center" }}>
+              <img src={ProfilePic} style={{ height: "200px" }} alt="Profile" />
+            </div>
+            {/* {data.site.siteMetadata.description} */}
+          </h5>
+          <h4>
+            Full-stack software engineer with an entrepreneurial spirit with 5
+            years of digital marketing, product management, and community
+            management experience, working in tech (startup to FAANG),
+            education, and music as well as leading a profitable startup. I'm a
+            recent Flatiron School graduate and accustomed to the Agile
+            methodology, working across technical and non-technical teams, and
+            managing project roadmaps.
+          </h4>
         </header>
       )}
       <div className="post-feed">

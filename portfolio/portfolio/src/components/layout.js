@@ -27,17 +27,17 @@ const Layout = props => {
           </a>
           <nav id="swup" className="site-head-left">
             <ul className="nav" role="menu">
-              {/* <li className="nav-home nav-current" role="menuitem">
-                <Link to={`/`}>Home</Link>
-              </li> */}
               <li className="nav-about" role="menuitem">
                 <Link to={`/about`}>About</Link>
               </li>
               <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
+                <a href="mailto:alex.beciana@gmail.com">Contact Me</a>
               </li>
               <li className="nav-tags" role="menuitem">
                 <Link to={`/tags`}>Tags</Link>
+              </li>
+              <li className="nav-home" role="menuitem">
+                <Link to={`/projects`}>Projects</Link>
               </li>
             </ul>
           </nav>
@@ -48,21 +48,37 @@ const Layout = props => {
           </div>
           <div className="site-head-right">
             <div className="social-links">
-              <a
+              {/* <a
                 href="https://www.facebook.com"
                 title="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Facebook
-              </a>
+              </a>*/}
               <a
-                href="https://twitter.com"
-                title="Twitter"
+                href="https://www.linkedin.com/in/alexbeciana1/"
+                title="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Twitter
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/abeciana1/"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.behance.net/alexbeciana"
+                title="Behance"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Behance
               </a>
               <Link
                 to={`/rss.xml`}
@@ -72,14 +88,6 @@ const Layout = props => {
               >
                 RSS
               </Link>
-              <a
-                href="https://github.com/jooplaan/gatsby-london-night-and-day"
-                title="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
             </div>
           </div>
         </div>
@@ -90,15 +98,7 @@ const Layout = props => {
         </div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built with{" "}
-        <a
-          href="https://gatsbyjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gatsby
-        </a>
+        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link>
       </footer>
     </div>
   );

@@ -9,6 +9,7 @@ import "../style/normalize.css";
 import "../style/all.scss";
 
 const ElementsPage = ({ data }, location) => {
+  console.log(data);
   const siteTitle = data.site.siteMetadata.title;
 
   return (
